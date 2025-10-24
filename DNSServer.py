@@ -101,7 +101,7 @@ dns_records = {
 def run_dns_server():
     # Create a UDP socket and bind it to the local IP address (what unique IP address is used here, similar to webserver lab) and port (the standard port for DNS)
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # Research this
-    server_socket.bind(('', 13331))
+    server_socket.bind(('', 53))
 
     while True:
         try:
@@ -173,3 +173,4 @@ if __name__ == '__main__':
     run_dns_server_user()
     #print("Encrypted Value:", encrypted_value)
     #print("Decrypted Value:", decrypted_value)
+
